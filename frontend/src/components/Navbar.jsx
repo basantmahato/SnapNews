@@ -12,7 +12,7 @@ const Navbar = ({ user, logout }) => {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to={`/${user?.role || 'consumer'}`} className="navbar-brand">
-          <span > <img className="brand-logo" src="favicon.png" alt="LOGO" /></span>
+          <span > <img className="brand-logo" src="./favicon.png" alt="LOGO" /></span>
           <span className="brand-text">SnapNews</span>
         </Link>
 
