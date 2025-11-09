@@ -10,6 +10,8 @@ const apiRoutes = require('./routes/api');
 
 const app = express();
 
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 connectDB();
 
 const corsOptions = {
