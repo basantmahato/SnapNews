@@ -46,6 +46,10 @@ const Login = () => {
     <div className="auth-container">
       <div className="auth-card fade-in">
         <div className="auth-header">
+        <div className="brand-logo-container">
+            <span > <img className="brand-logo" src="/favicon.png" alt="LOGO" /></span>
+          <span className="brand-text" style={{background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',fontWeight: '500', fontSize: '20px' , textAlign: 'center'}}>SnapNews</span>
+        </div>
           <h1>Welcome Back</h1>
           <p>Sign in to your account</p>
         </div>

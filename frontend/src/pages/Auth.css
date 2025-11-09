@@ -8,6 +8,15 @@
   background-attachment: fixed;
 }
 
+.brand-logo-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+
 .auth-card {
   background: var(--card-bg);
   border-radius: 20px;
@@ -194,3 +203,5 @@
     flex-direction: column;
   }
 }
+
+

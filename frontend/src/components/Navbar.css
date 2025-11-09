@@ -20,11 +20,11 @@
 .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+
   text-decoration: none;
   color: var(--text-primary);
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
   transition: transform 0.3s ease;
 }
 
