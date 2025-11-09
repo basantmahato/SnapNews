@@ -1,6 +1,7 @@
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
+express.static()
 
 // Ensure uploads directory exists
 const UPLOAD_DIR = path.join(__dirname, '..', 'uploads');
