@@ -38,7 +38,7 @@ const NewsCard = ({ article, isPublisher = false, onPreview }) => {
   }
 
   // Base URL for serving static files (without /api)
-  const BASE_URL = import.meta.env.VITE_BASE_URL || 'http://localhost:5000'
+  const BASE_URL = import.meta.env.VITE_BASE_URL || 'https://snapnews-pfhs.onrender.com/'
 
   return (
     <div className="news-card">
