@@ -7,6 +7,7 @@ import ConsumerDashboard from './pages/ConsumerDashboard'
 import NewsDetail from './pages/NewsDetail'
 import ProtectedRoute from './components/ProtectedRoute'
 import './App.css'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             element={
               <ProtectedRoute role="publisher">
                 <PublisherDashboard />
+                <Footer />
               </ProtectedRoute>
             }
           />
@@ -28,6 +30,7 @@ function App() {
             element={
               <ProtectedRoute role="consumer">
                 <ConsumerDashboard />
+                <Footer />
               </ProtectedRoute>
             }
           />

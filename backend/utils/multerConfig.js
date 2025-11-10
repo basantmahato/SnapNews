@@ -37,14 +37,14 @@ const fileFilter = (req, file, cb) => {
     }
 };
 
-// Init Upload Middleware
+
 const upload = multer({
     storage: storage,
-    limits: { fileSize: 5000000 }, // 5MB limit
+    limits: { fileSize: 5000000 },
     fileFilter: fileFilter
 }).single('thumbnail');
 
-// Wrapper middleware to handle multer errors
+
 const uploadMiddleware = (req, res, next) => {
     upload(req, res, (err) => {
         if (err) {

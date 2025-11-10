@@ -176,6 +176,9 @@ const Register = () => {
               Sign in here
             </Link>
           </p>
+             <p textAlign="center" style={{fontSize: '12px', color: '#888', marginTop: '10px'}}>
+           Crafted with &#10084; by <a style={{textDecoration:'none', fontWeight:'500', color:'red'}} href="https://github.com/basantmahato" >Basant </a> 
+          </p>
         </div>
       </div>
     </div>

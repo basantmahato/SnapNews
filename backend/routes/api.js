@@ -15,7 +15,6 @@ const {
 const router = express.Router();
 
 
-
 // Route: /api/dashboard-publisher
 router.get(
     '/dashboard-publisher', 
@@ -41,7 +40,7 @@ router.get(
     getNewsById
 );
 
-
+// Route: /api/dashboard-consumer
 router.get(
     '/dashboard-consumer', 
     protect, 
@@ -49,6 +48,7 @@ router.get(
     getConsumerDashboard
 );
 
+// Route: /api/getNews
 
 router.get(
     '/getNews', 
