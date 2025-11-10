@@ -20,8 +20,8 @@ const getPublisherDashboard = async (req, res) => {
     }
 };
 
-// @desc    Add a new news article
-// @route   POST /api/addNews
+//add news route
+
 const addNews = async (req, res) => {
     const { title, content, category } = req.body;
 
@@ -30,7 +30,7 @@ const addNews = async (req, res) => {
     }
 
     try {
-        // Get thumbnail URL if file was uploaded
+      
         let thumbnail = '';
         if (req.file) {
             thumbnail = `/uploads/${req.file.filename}`;
@@ -41,7 +41,7 @@ const addNews = async (req, res) => {
             content,
             category: category || 'World',
             thumbnail,
-            publisher: req.user.id // Publisher ID comes from the authenticated user
+            publisher: req.user.id 
         });
 
         res.status(201).json({ 
@@ -82,11 +82,11 @@ const getNews = async (req, res) => {
     }
 };
 
-// @desc    Get a single news article by ID
+
 // @route   GET /api/news/:id
 const getNewsById = async (req, res) => {
     try {
-        // Check if the ID is a valid MongoDB ObjectId
+     
         if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
             return res.status(400).json({ message: 'Invalid news article ID format' });
         }
