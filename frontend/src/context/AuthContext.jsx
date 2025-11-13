@@ -1,6 +1,8 @@
 import { createContext, useContext, useState, useEffect } from 'react'
 import { login as loginApi, register as registerApi } from '../services/authService'
 
+//AuthContext creation and useAuth hook
+
 const AuthContext = createContext()
 
 export const useAuth = () => {
@@ -10,6 +12,8 @@ export const useAuth = () => {
   }
   return context
 }
+
+//AuthProvider component and state management
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null)
@@ -31,6 +35,8 @@ export const AuthProvider = ({ children }) => {
     setLoading(false)
   }, [])
 
+  //login function and token storage
+
   const login = async (email, password) => {
     try {
       const data = await loginApi({ email, password })
@@ -46,6 +52,8 @@ export const AuthProvider = ({ children }) => {
     }
   }
 
+//register function and token storage
+  
   const register = async (username, email, password, role) => {
     try {
       const data = await registerApi({ username, email, password, role })
@@ -60,6 +68,8 @@ export const AuthProvider = ({ children }) => {
       }
     }
   }
+
+  //logout function and token removal
 
   const logout = () => {
     setUser(null)

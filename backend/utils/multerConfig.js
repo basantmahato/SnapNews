@@ -10,7 +10,7 @@ if (!fs.existsSync(UPLOAD_DIR)) {
     fs.mkdirSync(UPLOAD_DIR, { recursive: true });
 }
 
-// Set Storage Engine
+
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, UPLOAD_DIR);
@@ -24,7 +24,7 @@ const storage = multer.diskStorage({
 // File filter for images only
 const fileFilter = (req, file, cb) => {
     const allowedExtensions = /\.(jpeg|jpg|png|gif|webp)$/i;
-    // Standard MIME types: image/jpeg (for jpg and jpeg), image/png, image/gif, image/webp
+   
     const allowedMimeTypes = /^image\/(jpeg|png|gif|webp)$/i;
     
     const extname = allowedExtensions.test(path.extname(file.originalname));
